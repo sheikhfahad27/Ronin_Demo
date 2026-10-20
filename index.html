@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOLTIX | Premium Tech Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="announcement">
+    FREE SHIPPING ON SELECTED ORDERS | SHOP THE LATEST TECH
+  </div>
+
+  <header class="navbar">
+    <button id="menuToggle">☰</button>
+    <a class="logo" href="#">VOLTIX<span>®</span></a>
+
+    <nav id="navLinks">
+      <a href="#new">NEW ARRIVALS</a>
+      <a href="#trending">TOP TRENDING</a>
+      <a href="#categories">COLLECTIONS</a>
+      <a href="#audio">AUDIO</a>
+      <a href="#footer">SUPPORT</a>
+    </nav>
+
+    <div class="nav-right">
+      <button id="searchToggle" aria-label="Search">⌕</button>
+      <button id="cartToggle">BAG (<span id="cartCount">0</span>)</button>
+    </div>
+  </header>
+
+  <div class="search-box" id="searchBox">
+    <input id="searchInput" placeholder="Search products...">
+    <button id="searchButton">SEARCH</button>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <p>ENGINEERED FOR EVERYDAY</p>
+        <h1>MAKE EVERY<br>BEAT <span>COUNT.</span></h1>
+        <p class="description">
+          Discover your next favourite tech.
+          Premium audio, smart wearables and everyday essentials.
+        </p>
+        <a href="#new" class="main-btn">SHOP COLLECTION ↗</a>
+      </div>
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=1000&q=85" alt="Wireless earbuds">
+      </div>
+    </section>
+
+    <div class="benefits">
+      <span>✓ QUALITY PRODUCTS</span>
+      <span>↗ NATIONWIDE DELIVERY</span>
+      <span>♡ EVERYDAY TECHNOLOGY</span>
+      <span>◎ CUSTOMER SUPPORT</span>
+    </div>
+
+    <section class="section" id="categories">
+      <div class="section-title">
+        <div>
+          <small>EXPLORE OUR RANGE</small>
+          <h2>Shop by collection.</h2>
+        </div>
+        <a href="#trending">VIEW ALL ↗</a>
+      </div>
+
+      <div class="category-grid">
+        <button class="category" data-category="earbuds">
+          <img src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=600&q=80" alt="Earbuds">
+          <span>Wireless Earbuds ↗</span>
+        </button>
+        <button class="category" data-category="smartwatch">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Watch">
+          <span>Smart Watches ↗</span>
+        </button>
+        <button class="category" data-category="headphones">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Headphones">
+          <span>Headphones ↗</span>
+        </button>
+        <button class="category" data-category="powerbank">
+          <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=600&q=80" alt="Power bank">
+          <span>Power Banks ↗</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="section products-section" id="new">
+      <div class="section-title">
+        <div>
+          <small>JUST LANDED</small>
+          <h2>New arrivals.</h2>
+        </div>
+        <a href="#trending">EXPLORE PRODUCTS ↗</a>
+      </div>
+      <div class="product-grid" id="newProducts"></div>
+    </section>
+
+    <section class="feature" id="audio">
+      <div>
+        <small>YOUR SOUND. YOUR WORLD.</small>
+        <h2>Turn up the<br><span>good stuff.</span></h2>
+        <p>Discover audio made for your everyday moments.</p>
+        <a href="#trending" class="main-btn">EXPLORE AUDIO ↗</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1000&q=85" alt="Premium headphones">
+    </section>
+
+    <section class="section" id="trending">
+      <div class="section-title">
+        <div>
+          <small>COMMUNITY FAVOURITES</small>
+          <h2>Top trending.</h2>
+        </div>
+      </div>
+
+      <div class="filters" id="filters">
+        <button class="active" data-category="all">ALL PRODUCTS</button>
+        <button data-category="earbuds">EARBUDS</button>
+        <button data-category="smartwatch">SMARTWATCHES</button>
+        <button data-category="headphones">HEADPHONES</button>
+        <button data-category="powerbank">POWER BANKS</button>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+      <p id="emptyMessage" hidden>No matching products found.</p>
+    </section>
+
+    <section class="power-banner">
+      <div>
+        <small>POWER THROUGH YOUR DAY</small>
+        <h2>Always ready.<br>Always connected.</h2>
+        <p>Explore portable charging and everyday tech essentials.</p>
+        <a href="#trending" class="main-btn">SHOP ACCESSORIES ↗</a>
+      </div>
+      <img src="https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?auto=format&fit=crop&w=900&q=85" alt="Portable charger">
+    </section>
+
+    <section class="newsletter">
+      <small>STAY IN THE LOOP</small>
+      <h2>Good things are coming.</h2>
+      <p>Get updates about products and new arrivals.</p>
+      <form id="newsletterForm">
+        <input type="email" placeholder="Your email address" required>
+        <button>SUBSCRIBE ↗</button>
+      </form>
+      <p id="newsletterMessage"></p>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <a class="logo" href="#">VOLTIX<span>®</span></a>
+    <p>Everyday technology. Made to move with you.</p>
+    <div class="footer-links">
+      <a href="#new">New Arrivals</a>
+      <a href="#trending">Shop Products</a>
+      <a href="mailto:hello@example.com">Contact</a>
+    </div>
+    <small>© <span id="year"></span> VOLTIX. Frontend demo.</small>
+  </footer>
+
+  <div id="overlay" class="overlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-heading">
+      <h2>Your Shopping Bag</h2>
+      <button id="closeCart">✕</button>
+    </div>
+    <div id="cartItems"></div>
+    <div class="cart-bottom">
+      <p>Subtotal: <strong id="subtotal">Rs. 0</strong></p>
+      <button id="checkoutButton">CONTINUE TO CHECKOUT ↗</button>
+      <small>Demo only. No real payment is collected.</small>
+    </div>
+  </aside>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
